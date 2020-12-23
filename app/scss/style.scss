@@ -1,0 +1,112 @@
+/* Подключаем файлы стилей которые прописаны через _название-файла в scss */
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+
+.header {
+
+}
+
+.header__slider {
+	&-item {
+		height: 100vh;
+		background: url('../img/header-bg.jpg') no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+}
+
+.slider-item__info {
+	position: absolute;
+	right: 80px; /*смотрим отступ справа по макету*/
+	bottom: 116px; /*то же самое*/
+	color: white;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.slider-item__info-title {
+	font-family: Fira Sans;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 80px;
+	line-height: 86px;
+	/* identical to box height, or 107% */
+
+	text-align: right;
+	margin-bottom: 38px; 
+}
+
+.slider-item__info-suptext {
+	margin-bottom: 20px;
+}
+
+.slider-item__info-text {
+	margin-bottom: 15px;
+}
+
+.slider-arrows {
+	position: absolute;
+	cursor: pointer;
+	z-index: 4;
+}
+
+.slider-arrows__left {
+	top: 40px;
+	right: 130px;
+}
+
+.slider-arrows__right {
+	top: 40px;
+	right: 80px;
+}
+
+
+/* 2 */
+/* позиционируем относительно header этот блок*/
+.slider-dots {
+	position: absolute;
+	right: 50px;
+	bottom: 36px;
+	max-width: 920px;
+	width: 100%;
+	color: white;
+	/*класс от slick слайдера - активный класс*/
+	.slick-current {
+		.dots-box {
+			border-top: 4px solid $green;
+		}
+	}
+}
+
+.slider-dots__item {
+
+}
+
+.dots-box {
+	width: 200px;
+	height: 28px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 4px solid white;
+	&__number {
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	&__name {
+		font-weight: 300;
+		line-height: 19px;
+	}
+}
+
+@import "media";
+
+
+
+
+/* Выставить margin элементам блока slider-info */
+

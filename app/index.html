@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Вёрстка Gulp4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<style>
+
+
+</style>
+<body>
+	<header class="header">
+		<!-- 1 -->
+		<div class="header__slider"><!-- не будет нигде отдельно, поэтому это будет внутренний элемент -->
+			<div class="header__slider-item slider-item"><!-- является и элементом header и блоком -->
+				<div class="slider-item__info"><!-- элемент блока slider-item -->
+					<div class="slider-item__info-suptitle suptitle-left">Surf</div>
+					<div class="slider-item__info-title">North Shore</div>
+					<div class="slider-item__info-suptext suptitle-left">Condition</div>
+					<div class="slider-item__info-text">Radical</div>
+					<a href="#" class="slider-item__info-link">
+						<img src="img/arrows-right.svg" alt="arrows">
+					</a>
+				</div>
+			</div>
+			<div class="header__slider-item slider-item">
+				<div class="slider-item__info">
+					<div class="slider-item__info-suptitle suptitle-left">Surf</div>
+					<div class="slider-item__info-title">South Shore</div>
+					<div class="slider-item__info-suptext suptitle-left">Condition</div>
+					<div class="slider-item__info-text">Radical</div>
+					<a href="#" class="slider-item__info-link">
+						<img src="img/arrows-right.svg" alt="arrows">
+					</a>
+				</div>
+			</div>
+			<div class="header__slider-item slider-item">
+				<div class="slider-item__info">
+					<div class="slider-item__info-suptitle suptitle-left">Surf</div>
+					<div class="slider-item__info-title">West Shore</div>
+					<div class="slider-item__info-suptext suptitle-left">Condition</div>
+					<div class="slider-item__info-text">Radical</div>
+					<a href="#" class="slider-item__info-link">
+						<img src="img/arrows-right.svg" alt="arrows">
+					</a>
+				</div>
+			</div>
+			<div class="header__slider-item slider-item">
+				<div class="slider-item__info">
+					<div class="slider-item__info-suptitle suptitle-left">Surf</div>
+					<div class="slider-item__info-title">East Shore</div>
+					<div class="slider-item__info-suptext suptitle-left">Condition</div>
+					<div class="slider-item__info-text">Radical</div>
+					<a href="#" class="slider-item__info-link">
+						<img src="img/arrows-right.svg" alt="arrows">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 2 -->
+		<div class="slider-dots">
+			<div class="slider-dots__item">
+				<div class="dots-box">
+					<div class="dots-box__number">01</div>
+					<div class="dots-box__name">North Shore</div>
+				</div>
+			</div>
+			<div class="slider-dots__item">
+				<div class="dots-box">
+					<div class="dots-box__number">02</div>
+					<div class="dots-box__name">South Shore</div>
+				</div>
+			</div>
+			<div class="slider-dots__item">
+				<div class="dots-box">
+					<div class="dots-box__number">03</div>
+					<div class="dots-box__name">West Shore</div>
+				</div>
+			</div>
+			<div class="slider-dots__item">
+				<div class="dots-box">
+					<div class="dots-box__number">04</div>
+					<div class="dots-box__name">East Shore</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~   Документация к проекту   ~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+
+1. Скачиваем все пакеты npm install (создаётся папка node_modules)
+2. Запустить Gulp командой gulp (откроет localhost3000 с нашим проектом)
+3. normalize.css нужен для кроссбраузерной верстки
+4. subtitle всегда повторяются   (suptitle-left, suptitle-right)
+5. 4 slider-item__info в блоке header
+6. Если мы хотим, чтобы заказчик мог менять сам фон header потом, например этот лэндинг будет садиться потом на wordpress,  мы должны делать через background через атрибут style.
+7. Глобальные стили _global.scss
+8. Блоку slider-info не нужно задавать размеры, так как применяя размер шрифта и отступы для внутренних элементов (текстов), блок сам получит свои размеры, так как он обёртка для внутренних элементов.
+9. Slider делаем через slick.js (слайдеры, от библиотеки Jquery)
+10. Задаём родителю блоку text-transform: uppercase - и у всего текста этого блока будет верхний регистр текста так как это свойство наследуется
+11. Изменил кнопки у слайдера по default и прописал картинками (svg) стрелки вправо и влево, указава в main.js свойства prevArrow и nextArrow.
+12.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~   Вопросы   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+svg формат чем типичен ?
+
+
+-->
+
